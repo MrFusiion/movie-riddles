@@ -267,6 +267,9 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Movie riddles solver and checker.')
 
+    parser.add_argument("--solve", action="store_true",
+                            help='solved the movie riddles')
+
     parser.add_argument("--check", action="store_true",
                             help='check if found solutions are correct')
 
@@ -275,9 +278,10 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+    if args.clear:
+        clear_solutions()
+
     if args.check:
         check_solutions()
-    elif args.clear:
-        clear_solutions()
-    else:
+    elif args.solve:
         execute_riddle_solver()

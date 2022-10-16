@@ -12,7 +12,7 @@ py riddle_solver.py --clear --solve
 
 ### check all solutions
 ```
-py riddle_solver.py --chech
+py riddle_solver.py --check
 ```
 ---
 
